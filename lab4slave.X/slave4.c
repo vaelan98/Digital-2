@@ -40,11 +40,15 @@
 //*****************************************************************************
 // Definición de variables
 //*****************************************************************************
-#define _XTAL_FREQ 4000000
+#define _XTAL_FREQ 8000000
 uint8_t coso;
 uint8_t coso2;
+
+uint8_t valor1;
 uint8_t valor2;
-uint8_t valor;
+uint8_t valor3;
+uint8_t valor4;
+uint8_t valor5;
 //*****************************************************************************
 // Definición de funciones para que se puedan colocar después del main de lo 
 // contrario hay que colocarlos todas las funciones antes del main
@@ -56,57 +60,63 @@ void setup(void);
 
 //*****************************************************************************
 // Código Principal
-//*****************************************************************************
+//**************************
+void __interrupt() isr(void){
+   if(SSPIF == 1){
+       //Recieve();
+     PORTD = spiRead();
+     if (PORTD==2){
+        spiWrite(4);
+        
+        SSPIF = 0;
+        
+     }
+       }
+}
+void Recieve(void);
+void Recieve(void){
+      PIR1bits.RCIF= 1;
+       if(PIR1bits.RCIF== 1){
+           valor1= RCREG;
+           PIR1bits.RCIF=0;
+       }
+      
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor2= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor3= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor4= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor5= RCREG;
+             PIR1bits.RCIF=0;
+        }
+       
+       } 
+
 void main(void) {
     setup();
-   ADCON0bits.ADCS1=1;
-    ADCON0bits.ADCS0=0;		// FOSC/8 RELOJ TAD
+   
     
-   	
-    
-    ADCON1bits.ADFM	=0	; //JUSTIFICACIÓN A LA IZQUIERDA
-    ADCON1bits.VCFG1=0		; //VSS COMO REFERENCIA VREF-
-    ADCON1bits.VCFG0=0			;//VDD COMO REFERENCIA VREF+
-    
-    ADCON0bits.ADON=1;
-    valor=0;
-    valor2=255;
-     __delay_ms(330);
     //*************************************************************************
     // Loop infinito
     //*************************************************************************
     while(1){
         
-        
-            
-         PORTD = spiRead();
+     
          
-        __delay_ms(1);
          
-         if(PORTD==0){
-           
-            ADCON0bits.CHS = 0b0001;
-             __delay_ms(20);
-            ADCON0bits.GO=1;
-            while(ADCON0bits.GO){
-           
-                 coso2= ADRESH;
-                  __delay_ms(100);
-                 spiWrite(coso2);
-        }
-         
-         }
-         else{
-            ADCON0bits.CHS = 0b0000;
-             __delay_ms(20);
-            ADCON0bits.GO=1;
-            while(ADCON0bits.GO){
-                coso=ADRESH;
-                 __delay_ms(100);
-                
-                spiWrite(coso);
-        }
-         }}}
+    }}
 //*****************************************************************************
 // Función de Inicialización
 //*****************************************************************************

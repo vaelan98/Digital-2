@@ -1,4 +1,14 @@
-#pragma config FOSC = EXTRC_NOCLKOUT// Oscillator Selection bits (RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
+/*
+ * File:   main.c
+ * Author: Pablo
+ * Ejemplo de uso de I2C Esclavo
+ * Created on 17 de febrero de 2020, 10:32 AM
+ */
+//*****************************************************************************
+// Palabra de configuración
+//*****************************************************************************
+// CONFIG1
+#pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (RCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, RC on RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
@@ -29,10 +39,7 @@
 #define _XTAL_FREQ 8000000
 uint8_t z;
 uint8_t dato;
-uint8_t coso;
 uint8_t coso2;
-uint8_t valor2;
-uint8_t valor;
 //*****************************************************************************
 // Definición de funciones para que se puedan colocar después del main de lo 
 // contrario hay que colocarlos todas las funciones antes del main
@@ -66,11 +73,10 @@ void __interrupt() isr(void){
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = PORTB;
+            SSPBUF = ADRESH;
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
-            
         }
        
         PIR1bits.SSPIF = 0;    
@@ -99,7 +105,8 @@ void main(void) {
              __delay_ms(20);
             ADCON0bits.GO=1;
             while(ADCON0bits.GO){
-                coso=ADRESH;
+           
+                 coso2= ADRESH;
     }
     return;
     }}
@@ -112,12 +119,7 @@ void setup(void){
     
     TRISB = 0;
     TRISD = 0;
-    TRISAbits.TRISA0 = 1;
-    TRISAbits.TRISA1 = 1;
-    TRISAbits.TRISA2 = 1;
-    ANSELbits.ANS0=1;
-    ANSELbits.ANS1=1;
-    ANSELbits.ANS2=1;
+    
     PORTB = 0;
     PORTD = 0;
     I2C_Slave_Init(0x50);   

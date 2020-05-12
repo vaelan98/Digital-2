@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "slave4.c" 2
-# 14 "slave4.c"
+# 16 "slave4.c"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -2514,7 +2514,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 35 "slave4.c" 2
+# 37 "slave4.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 3
@@ -2649,10 +2649,10 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 36 "slave4.c" 2
+# 38 "slave4.c" 2
 
 # 1 "./SPI.h" 1
-# 10 "./SPI.h"
+# 17 "./SPI.h"
 typedef enum
 {
     SPI_MASTER_OSC_DIV4 = 0b00100000,
@@ -2686,7 +2686,7 @@ void spiInit(Spi_Type, Spi_Data_Sample, Spi_Clock_Idle, Spi_Transmit_Edge);
 void spiWrite(char);
 unsigned spiDataReady();
 char spiRead();
-# 37 "slave4.c" 2
+# 39 "slave4.c" 2
 
 
 
@@ -2694,8 +2694,12 @@ char spiRead();
 
 uint8_t coso;
 uint8_t coso2;
+
+uint8_t valor1;
 uint8_t valor2;
-uint8_t valor;
+uint8_t valor3;
+uint8_t valor4;
+uint8_t valor5;
 
 
 
@@ -2708,21 +2712,53 @@ void setup(void);
 
 
 
+void __attribute__((picinterrupt(("")))) isr(void){
+   if(SSPIF == 1){
+
+     PORTD = spiRead();
+     if (PORTD==2){
+        spiWrite(4);
+
+        SSPIF = 0;
+
+     }
+       }
+}
+void Recieve(void);
+void Recieve(void){
+      PIR1bits.RCIF= 1;
+       if(PIR1bits.RCIF== 1){
+           valor1= RCREG;
+           PIR1bits.RCIF=0;
+       }
+
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor2= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor3= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor4= RCREG;
+             PIR1bits.RCIF=0;
+        }
+        PIR1bits.RCIF=0;
+        if(PIR1bits.RCIF== 1){
+           valor5= RCREG;
+             PIR1bits.RCIF=0;
+        }
+
+       }
+
 void main(void) {
     setup();
-   ADCON0bits.ADCS1=1;
-    ADCON0bits.ADCS0=0;
 
 
-
-    ADCON1bits.ADFM =0 ;
-    ADCON1bits.VCFG1=0 ;
-    ADCON1bits.VCFG0=0 ;
-
-    ADCON0bits.ADON=1;
-    valor=0;
-    valor2=255;
-     _delay((unsigned long)((330)*(4000000/4000.0)));
 
 
 
@@ -2730,34 +2766,8 @@ void main(void) {
 
 
 
-         PORTD = spiRead();
 
-        _delay((unsigned long)((1)*(4000000/4000.0)));
-
-         if(PORTD==0){
-
-            ADCON0bits.CHS = 0b0001;
-             _delay((unsigned long)((20)*(4000000/4000.0)));
-            ADCON0bits.GO=1;
-            while(ADCON0bits.GO){
-
-                 coso2= ADRESH;
-                  _delay((unsigned long)((100)*(4000000/4000.0)));
-                 spiWrite(coso2);
-        }
-
-         }
-         else{
-            ADCON0bits.CHS = 0b0000;
-             _delay((unsigned long)((20)*(4000000/4000.0)));
-            ADCON0bits.GO=1;
-            while(ADCON0bits.GO){
-                coso=ADRESH;
-                 _delay((unsigned long)((100)*(4000000/4000.0)));
-
-                spiWrite(coso);
-        }
-         }}}
+    }}
 
 
 

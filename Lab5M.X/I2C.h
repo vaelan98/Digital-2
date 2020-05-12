@@ -21,7 +21,7 @@
 #include <stdint.h>
 
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 #endif
 
 //*****************************************************************************
@@ -63,5 +63,7 @@ unsigned short I2C_Master_Read(unsigned short a);
 // Función para inicializar I2C Esclavo
 //*****************************************************************************
 void I2C_Slave_Init(uint8_t address);
+
+int I2C_Master_Read2(unsigned short a);
 //*****************************************************************************
 #endif	/* __I2C_H */

@@ -3,32 +3,32 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
-"43 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
+"35 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X/LCD2.h
 [v _port port `(v  1 e 1 0 ]
-"47
+"39
 [v _com com `(v  1 e 1 0 ]
-"55
+"47
 [v _lcd_clear lcd_clear `(v  1 e 1 0 ]
-"59
+"51
 [v _cur cur `(v  1 e 1 0 ]
-"75
+"67
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
-"99
+"91
 [v _letra letra `(v  1 e 1 0 ]
-"110
+"102
 [v _word word `(v  1 e 1 0 ]
-"129
-[v _lee1 lee1 `(v  1 e 1 0 ]
-"141
+"133
 [v _lee2 lee2 `(v  1 e 1 0 ]
-"222
+"182
 [v _reverse reverse `(v  1 e 1 0 ]
-"232
+"192
 [v _Dtr Dtr `(i  1 e 2 0 ]
-"247
+"207
 [v _ftoa2 ftoa2 `(v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
@@ -71,6 +71,10 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
@@ -79,39 +83,53 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"16 C:\Users\gerar\Desktop\Digital 2\Lab5M.X\I2C.c
+"16 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 "32
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "39
 [v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+"47
+[v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
 "55
 [v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
 "65
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
 "74
 [v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
-"55 C:\Users\gerar\Desktop\Digital 2\Lab5M.X\MasterPapu.c
+"54 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\MasterPapu.c
+[v _read_ds1307 read_ds1307 `(us  1 e 2 0 ]
+"67
+[v _write_ds1307 write_ds1307 `(v  1 e 1 0 ]
+"77
+[v _BCD2UpperCh BCD2UpperCh `(uc  1 e 1 0 ]
+"82
+[v _BCD2LowerCh BCD2LowerCh `(uc  1 e 1 0 ]
+"87
+[v _Binary2BCD Binary2BCD `(i  1 e 2 0 ]
+"101
+[v _BCD2Binary BCD2Binary `(i  1 e 2 0 ]
+"146
+[v _receive receive `(v  1 e 1 0 ]
+"209
 [v _main main `(v  1 e 1 0 ]
-"107
+"513
 [v _setup setup `(v  1 e 1 0 ]
-"22 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
+"22 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X/LCD2.h
 [v _guardar guardar `[10]*.1uc  1 e 10 0 ]
 "23
 [v _guardar2 guardar2 `[10]*.1uc  1 e 10 0 ]
 "25
 [v _Voldc Voldc `uc  1 e 1 0 ]
 "26
-[v _Voldc2 Voldc2 `uc  1 e 1 0 ]
-"27
-[v _enviar enviar `uc  1 e 1 0 ]
+[v _Voldc2 Voldc2 `ui  1 e 2 0 ]
 "29
 [v _voltaje voltaje `d  1 e 4 0 ]
 "30
-[v _voltaje2 voltaje2 `d  1 e 4 0 ]
+[v _voltaje2 voltaje2 `ui  1 e 2 0 ]
 "166 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
-[s S126 . 1 `uc 1 RA0 1 0 :1:0 
+[s S64 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -121,13 +139,37 @@
 `uc 1 RA7 1 0 :1:7 
 ]
 "183
-[u S135 . 1 `S126 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES135  1 e 1 @5 ]
+[u S73 . 1 `S64 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES73  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S273 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"245
+[u S282 . 1 `S273 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES282  1 e 1 @6 ]
+[s S301 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"307
+[u S310 . 1 `S301 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES310  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S84 . 1 `uc 1 RD0 1 0 :1:0 
+[s S23 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -137,42 +179,64 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "369
-[u S93 . 1 `S84 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES93  1 e 1 @8 ]
+[u S32 . 1 `S23 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES32  1 e 1 @8 ]
+[s S119 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S127 . 1 `S119 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES127  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-"1140
-[v _RCREG RCREG `VEuc  1 e 1 @26 ]
-[s S37 . 1 `uc 1 ADON 1 0 :1:0 
-`uc 1 GO_nDONE 1 0 :1:1 
-`uc 1 CHS 1 0 :4:2 
-`uc 1 ADCS 1 0 :2:6 
+[s S203 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
 ]
-"1276
-[s S42 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO 1 0 :1:1 
-`uc 1 CHS0 1 0 :1:2 
-`uc 1 CHS1 1 0 :1:3 
-`uc 1 CHS2 1 0 :1:4 
-`uc 1 CHS3 1 0 :1:5 
-`uc 1 ADCS0 1 0 :1:6 
-`uc 1 ADCS1 1 0 :1:7 
+"1068
+[s S212 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 RC9 1 0 :1:6 
 ]
-[s S51 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 nDONE 1 0 :1:1 
+[s S216 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
 ]
-[s S54 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 GO_DONE 1 0 :1:1 
+[s S219 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
 ]
-[u S57 . 1 `S37 1 . 1 0 `S42 1 . 1 0 `S51 1 . 1 0 `S54 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES57  1 e 1 @31 ]
+[u S222 . 1 `S203 1 . 1 0 `S212 1 . 1 0 `S216 1 . 1 0 `S219 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES222  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S304 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S247 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1495
+[u S256 . 1 `S247 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES256  1 e 1 @134 ]
+[s S527 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -182,13 +246,13 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S313 . 1 `S304 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES313  1 e 1 @135 ]
+[u S536 . 1 `S527 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES536  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S325 . 1 `uc 1 SEN 1 0 :1:0 
+[s S548 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -198,52 +262,115 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S334 . 1 `S325 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES334  1 e 1 @145 ]
+[u S557 . 1 `S548 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES557  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S22 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 VCFG0 1 0 :1:4 
-`uc 1 VCFG1 1 0 :1:5 
-`uc 1 . 1 0 :1:6 
-`uc 1 ADFM 1 0 :1:7 
+[s S143 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
 ]
-"2991
-[u S28 . 1 `S22 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES28  1 e 1 @159 ]
+"2582
+[s S152 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S156 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[u S159 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S156 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES159  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2704
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
+[s S180 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3352
+[u S189 . 1 `S180 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES189  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"3896
-[v _GIE GIE `VEb  1 e 0 @95 ]
-"4040
-[v _PEIE PEIE `VEb  1 e 0 @94 ]
-"4274
-[v _SSPIE SSPIE `VEb  1 e 0 @1123 ]
-"4277
-[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
-"4457
-[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
-"4460
-[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\errno.c
 [v _errno errno `i  1 e 2 0 ]
-"49 C:\Users\gerar\Desktop\Digital 2\Lab5M.X\MasterPapu.c
-[v _valor valor `uc  1 e 1 0 ]
-"55
+"113 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\MasterPapu.c
+[v _second second `i  1 e 2 0 ]
+"114
+[v _minute minute `i  1 e 2 0 ]
+"115
+[v _hour hour `i  1 e 2 0 ]
+"116
+[v _hr hr `i  1 e 2 0 ]
+"117
+[v _day day `i  1 e 2 0 ]
+"119
+[v _month month `i  1 e 2 0 ]
+"120
+[v _year year `i  1 e 2 0 ]
+"121
+[v _ap ap `i  1 e 2 0 ]
+"123
+[v _set_count set_count `us  1 e 2 0 ]
+"124
+[v _set set `s  1 e 2 0 ]
+"126
+[v _time time `[12]uc  1 e 12 0 ]
+"127
+[v _date date `[9]uc  1 e 9 0 ]
+"128
+[v _valor valor `ui  1 e 2 0 ]
+"134
+[v _raw_temp raw_temp `ui  1 e 2 0 ]
+"135
+[v _raw_temp2 raw_temp2 `ui  1 e 2 0 ]
+"136
+[v _temp temp `[10]uc  1 e 10 0 ]
+"137
+[v _temp2 temp2 `[10]uc  1 e 10 0 ]
+"138
+[v _dis dis `[4]uc  1 e 4 0 ]
+"139
+[v _dis2 dis2 `[3]uc  1 e 3 0 ]
+"140
+[v _pes pes `[5]uc  1 e 5 0 ]
+"141
+[v _c c `i  1 e 2 0 ]
+"142
+[v _pes2 pes2 `[6]uc  1 e 6 0 ]
+"209
 [v _main main `(v  1 e 1 0 ]
 {
-"103
+"509
 } 0
-"107
+"67
+[v _write_ds1307 write_ds1307 `(v  1 e 1 0 ]
+{
+[v write_ds1307@address address `us  1 p 2 2 ]
+[v write_ds1307@w_data w_data `us  1 p 2 4 ]
+"75
+} 0
+"513
 [v _setup setup `(v  1 e 1 0 ]
 {
-"117
+"525
 } 0
-"16 C:\Users\gerar\Desktop\Digital 2\Lab5M.X\I2C.c
+"16 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\I2C.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
 [v I2C_Master_Init@c c `DCul  1 p 4 0 ]
@@ -261,13 +388,80 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"141 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
+"146 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\MasterPapu.c
+[v _receive receive `(v  1 e 1 0 ]
+{
+"167
+} 0
+"54
+[v _read_ds1307 read_ds1307 `(us  1 e 2 0 ]
+{
+"56
+[v read_ds1307@r_data r_data `us  1 a 2 8 ]
+"54
+[v read_ds1307@address address `us  1 p 2 6 ]
+"65
+} 0
+"65 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\I2C.c
+[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
+{
+[v I2C_Master_Write@d d `ui  1 p 2 0 ]
+"69
+} 0
+"55
+[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
+{
+"59
+} 0
+"39
+[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
+{
+"43
+} 0
+"47
+[v _I2C_Master_RepeatedStart I2C_Master_RepeatedStart `(v  1 e 1 0 ]
+{
+"51
+} 0
+"74
+[v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
+{
+"76
+[v I2C_Master_Read@temp temp `us  1 a 2 4 ]
+"74
+[v I2C_Master_Read@a a `us  1 p 2 0 ]
+"89
+} 0
+"32
+[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
+{
+"35
+} 0
+"133 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X/LCD2.h
 [v _lee2 lee2 `(v  1 e 1 0 ]
 {
 [v lee2@coso coso `uc  1 a 1 wreg ]
 [v lee2@coso coso `uc  1 a 1 wreg ]
-[v lee2@coso coso `uc  1 a 1 74 ]
-"154
+[v lee2@coso coso `uc  1 a 1 56 ]
+"146
+} 0
+"102
+[v _word word `(v  1 e 1 0 ]
+{
+"104
+[v word@i i `i  1 a 2 8 ]
+"102
+[v word@a a `*.39uc  1 p 2 3 ]
+"107
+} 0
+"91
+[v _letra letra `(v  1 e 1 0 ]
+{
+[v letra@E E `uc  1 a 1 wreg ]
+[v letra@E E `uc  1 a 1 wreg ]
+"93
+[v letra@E E `uc  1 a 1 2 ]
+"98
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\itoa.c
 [v _itoa itoa `(*.5uc  1 e 1 0 ]
@@ -317,115 +511,6 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
 "30
 } 0
-"129 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
-[v _lee1 lee1 `(v  1 e 1 0 ]
-{
-[v lee1@coso coso `uc  1 a 1 wreg ]
-[v lee1@coso coso `uc  1 a 1 wreg ]
-[v lee1@coso coso `uc  1 a 1 68 ]
-"140
-} 0
-"110
-[v _word word `(v  1 e 1 0 ]
-{
-"112
-[v word@i i `i  1 a 2 8 ]
-"110
-[v word@a a `*.26uc  1 p 2 3 ]
-"115
-} 0
-"99
-[v _letra letra `(v  1 e 1 0 ]
-{
-[v letra@E E `uc  1 a 1 wreg ]
-[v letra@E E `uc  1 a 1 wreg ]
-"101
-[v letra@E E `uc  1 a 1 2 ]
-"106
-} 0
-"247
-[v _ftoa2 ftoa2 `(v  1 e 1 0 ]
-{
-"249
-[v ftoa2@cosof cosof `f  1 a 4 12 ]
-"248
-[v ftoa2@coso coso `i  1 a 2 10 ]
-"250
-[v ftoa2@i i `i  1 a 2 8 ]
-"247
-[v ftoa2@m m `f  1 p 4 55 ]
-[v ftoa2@Q Q `*.5uc  1 p 1 59 ]
-[v ftoa2@puntor puntor `i  1 p 2 60 ]
-"257
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\pow.c
-[v _pow pow `(d  1 e 4 0 ]
-{
-"8
-[v pow@yi yi `ul  1 a 4 51 ]
-"7
-[v pow@sign sign `uc  1 a 1 50 ]
-"5
-[v pow@x x `d  1 p 4 33 ]
-[v pow@y y `d  1 p 4 37 ]
-"31
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\log.c
-[v _log log `(d  1 e 4 0 ]
-{
-"7
-[v log@exponent exponent `i  1 a 2 77 ]
-"5
-[v log@x x `d  1 p 4 16 ]
-"9
-[v log@coeff coeff `DC[9]d  1 s 36 coeff ]
-"36
-} 0
-"12 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\exp.c
-[v _exp exp `(d  1 e 4 0 ]
-{
-"14
-[v exp@exponent exponent `i  1 a 2 30 ]
-"15
-[v exp@sign sign `uc  1 a 1 32 ]
-"12
-[v exp@x x `d  1 p 4 22 ]
-"17
-[v exp@coeff coeff `DC[10]d  1 s 40 coeff ]
-"57
-} 0
-"277 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\frexp.c
-[v _ldexp ldexp `(d  1 e 4 0 ]
-{
-[v ldexp@value value `d  1 p 4 16 ]
-[v ldexp@newexp newexp `i  1 p 2 20 ]
-"307
-} 0
-"13 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\floor.c
-[v _floor floor `(d  1 e 4 0 ]
-{
-"15
-[v floor@i i `d  1 a 4 4 ]
-"16
-[v floor@expon expon `i  1 a 2 8 ]
-"13
-[v floor@x x `d  1 p 4 0 ]
-"30
-} 0
-"254 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\frexp.c
-[v _frexp frexp `(d  1 e 4 0 ]
-{
-[v frexp@value value `d  1 p 4 26 ]
-[v frexp@eptr eptr `*.4i  1 p 1 30 ]
-"274
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\fleq.c
-[v ___fleq __fleq `(b  1 e 0 0 ]
-{
-[v ___fleq@ff1 ff1 `d  1 p 4 14 ]
-[v ___fleq@ff2 ff2 `d  1 p 4 18 ]
-"12
-} 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
@@ -451,47 +536,29 @@
 [v ___fltol@f1 f1 `d  1 p 4 0 ]
 "70
 } 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\flge.c
-[v ___flge __flge `(b  1 e 0 0 ]
-{
-[v ___flge@ff1 ff1 `d  1 p 4 0 ]
-[v ___flge@ff2 ff2 `d  1 p 4 4 ]
-"19
-} 0
-"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\evalpoly.c
-[v _eval_poly eval_poly `(d  1 e 4 0 ]
-{
-"6
-[v eval_poly@res res `d  1 a 4 12 ]
-"4
-[v eval_poly@x x `d  1 p 4 0 ]
-[v eval_poly@d d `*.24DCd  1 p 1 4 ]
-[v eval_poly@n n `i  1 p 2 5 ]
-"12
-} 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S677 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S892 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S682 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S685 . 4 `l 1 i 4 0 `d 1 f 4 0 `S677 1 fAsBytes 4 0 `S682 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S685  1 a 4 51 ]
+[s S897 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S900 . 4 `l 1 i 4 0 `d 1 f 4 0 `S892 1 fAsBytes 4 0 `S897 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S900  1 a 4 20 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 46 ]
-[s S754 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 14 ]
+[s S969 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S757 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S754 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S757  1 a 2 55 ]
+[u S972 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S969 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S972  1 a 2 24 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 50 ]
+[v ___flmul@bexp bexp `uc  1 a 1 19 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 45 ]
+[v ___flmul@aexp aexp `uc  1 a 1 18 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 44 ]
+[v ___flmul@sign sign `uc  1 a 1 13 ]
 "8
-[v ___flmul@b b `d  1 p 4 31 ]
-[v ___flmul@a a `d  1 p 4 35 ]
+[v ___flmul@b b `d  1 p 4 0 ]
+[v ___flmul@a a `d  1 p 4 4 ]
 "205
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul8_16.c
@@ -508,170 +575,140 @@
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
-"242 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcadd.c
-[v ___flsub __flsub `(d  1 e 4 0 ]
-{
-[v ___flsub@a a `d  1 p 4 0 ]
-[v ___flsub@b b `d  1 p 4 4 ]
-"250
-} 0
-"10
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 76 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 75 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 74 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 73 ]
-"10
-[v ___fladd@b b `d  1 p 4 57 ]
-[v ___fladd@a a `d  1 p 4 61 ]
-"237
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\flneg.c
-[v ___flneg __flneg `(d  1 e 4 0 ]
-{
-[v ___flneg@f1 f1 `d  1 p 4 0 ]
-"20
-} 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 {
 "21
-[v ___fldiv@grs grs `ul  1 a 4 7 ]
+[v ___fldiv@grs grs `ul  1 a 4 46 ]
 "22
-[v ___fldiv@rem rem `ul  1 a 4 0 ]
+[v ___fldiv@rem rem `ul  1 a 4 39 ]
 "20
-[v ___fldiv@new_exp new_exp `i  1 a 2 5 ]
+[v ___fldiv@new_exp new_exp `i  1 a 2 44 ]
 "19
-[v ___fldiv@aexp aexp `uc  1 a 1 12 ]
+[v ___fldiv@aexp aexp `uc  1 a 1 51 ]
 "18
-[v ___fldiv@bexp bexp `uc  1 a 1 11 ]
+[v ___fldiv@bexp bexp `uc  1 a 1 50 ]
 "16
-[v ___fldiv@sign sign `uc  1 a 1 4 ]
+[v ___fldiv@sign sign `uc  1 a 1 43 ]
 "8
-[v ___fldiv@a a `d  1 p 4 57 ]
-[v ___fldiv@b b `d  1 p 4 61 ]
+[v ___fldiv@a a `d  1 p 4 26 ]
+[v ___fldiv@b b `d  1 p 4 30 ]
 "185
 } 0
-"232 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
-[v _Dtr Dtr `(i  1 e 2 0 ]
+"67 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X/LCD2.h
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
-"233
-[v Dtr@i i `i  1 a 2 5 ]
-"232
-[v Dtr@y y `i  1 p 2 0 ]
-[v Dtr@zpr zpr `*.5uc  1 p 1 2 ]
-[v Dtr@P P `i  1 p 2 3 ]
-"244
+"89
 } 0
-"222
-[v _reverse reverse `(v  1 e 1 0 ]
+"47
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
 {
-[v reverse@zpr zpr `*.5uc  1 a 1 wreg ]
-"223
-[v reverse@j j `i  1 a 2 9 ]
-[v reverse@i i `i  1 a 2 7 ]
-[v reverse@tiempo tiempo `i  1 a 2 5 ]
-"222
-[v reverse@zpr zpr `*.5uc  1 a 1 wreg ]
-[v reverse@len len `i  1 p 2 0 ]
-[v reverse@zpr zpr `*.5uc  1 a 1 11 ]
-"231
+"50
+} 0
+"51
+[v _cur cur `(v  1 e 1 0 ]
+{
+[v cur@a a `uc  1 a 1 wreg ]
+"52
+[v cur@tiempo tiempo `uc  1 a 1 6 ]
+"51
+[v cur@a a `uc  1 a 1 wreg ]
+[v cur@b b `uc  1 p 1 2 ]
+"53
+[v cur@a a `uc  1 a 1 5 ]
+"65
+} 0
+"39
+[v _com com `(v  1 e 1 0 ]
+{
+[v com@E E `uc  1 a 1 wreg ]
+[v com@E E `uc  1 a 1 wreg ]
+[v com@E E `uc  1 a 1 1 ]
+"45
+} 0
+"35
+[v _port port `(v  1 e 1 0 ]
+{
+[v port@E E `uc  1 a 1 wreg ]
+[v port@E E `uc  1 a 1 wreg ]
+[v port@E E `uc  1 a 1 0 ]
+"37
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 0 ]
+"9
+} 0
+"87 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\MasterPapu.c
+[v _Binary2BCD Binary2BCD `(i  1 e 2 0 ]
+{
+"89
+[v Binary2BCD@t2 t2 `i  1 a 2 14 ]
+[v Binary2BCD@t1 t1 `i  1 a 2 12 ]
+"87
+[v Binary2BCD@a a `i  1 p 2 8 ]
+"99
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 6 ]
-[v ___awmod@counter counter `uc  1 a 1 5 ]
+[v ___awmod@sign sign `uc  1 a 1 13 ]
+[v ___awmod@counter counter `uc  1 a 1 12 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 0 ]
-[v ___awmod@dividend dividend `i  1 p 2 2 ]
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+[v ___awmod@dividend dividend `i  1 p 2 6 ]
 "34
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
-[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
 "11
-[v ___awdiv@sign sign `uc  1 a 1 6 ]
-[v ___awdiv@counter counter `uc  1 a 1 5 ]
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 0 ]
-[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+[v ___awdiv@divisor divisor `i  1 p 2 6 ]
+[v ___awdiv@dividend dividend `i  1 p 2 8 ]
 "41
 } 0
-"75 C:\Users\gerar\Desktop\Digital 2\Lab5M.X/LCD2.h
-[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"77 C:\Users\gerar\Desktop\Iconos\Digital 2\Lab5M.X\MasterPapu.c
+[v _BCD2UpperCh BCD2UpperCh `(uc  1 e 1 0 ]
 {
-"97
+[v BCD2UpperCh@bcd bcd `uc  1 a 1 wreg ]
+[v BCD2UpperCh@bcd bcd `uc  1 a 1 wreg ]
+"79
+[v BCD2UpperCh@bcd bcd `uc  1 a 1 1 ]
+"80
 } 0
-"55
-[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"82
+[v _BCD2LowerCh BCD2LowerCh `(uc  1 e 1 0 ]
 {
-"58
+[v BCD2LowerCh@bcd bcd `uc  1 a 1 wreg ]
+[v BCD2LowerCh@bcd bcd `uc  1 a 1 wreg ]
+"84
+[v BCD2LowerCh@bcd bcd `uc  1 a 1 0 ]
+"85
 } 0
-"59
-[v _cur cur `(v  1 e 1 0 ]
+"101
+[v _BCD2Binary BCD2Binary `(i  1 e 2 0 ]
 {
-[v cur@a a `uc  1 a 1 wreg ]
-"60
-[v cur@tiempo tiempo `uc  1 a 1 7 ]
-"59
-[v cur@a a `uc  1 a 1 wreg ]
-[v cur@b b `uc  1 p 1 3 ]
-"61
-[v cur@a a `uc  1 a 1 6 ]
-"73
+"103
+[v BCD2Binary@t t `i  1 a 2 10 ]
+[v BCD2Binary@r r `i  1 a 2 8 ]
+"101
+[v BCD2Binary@a a `i  1 p 2 6 ]
+"111
 } 0
-"47
-[v _com com `(v  1 e 1 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 {
-[v com@E E `uc  1 a 1 wreg ]
-[v com@E E `uc  1 a 1 wreg ]
-[v com@E E `uc  1 a 1 2 ]
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
-} 0
-"43
-[v _port port `(v  1 e 1 0 ]
-{
-[v port@E E `uc  1 a 1 wreg ]
-[v port@E E `uc  1 a 1 wreg ]
-[v port@E E `uc  1 a 1 0 ]
-"45
-} 0
-"65 C:\Users\gerar\Desktop\Digital 2\Lab5M.X\I2C.c
-[v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
-{
-[v I2C_Master_Write@d d `ui  1 p 2 0 ]
-"69
-} 0
-"55
-[v _I2C_Master_Stop I2C_Master_Stop `(v  1 e 1 0 ]
-{
-"59
-} 0
-"39
-[v _I2C_Master_Start I2C_Master_Start `(v  1 e 1 0 ]
-{
-"43
-} 0
-"74
-[v _I2C_Master_Read I2C_Master_Read `(us  1 e 2 0 ]
-{
-"76
-[v I2C_Master_Read@temp temp `us  1 a 2 4 ]
-"74
-[v I2C_Master_Read@a a `us  1 p 2 0 ]
-"89
-} 0
-"32
-[v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
-{
-"35
 } 0

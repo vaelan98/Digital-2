@@ -36,24 +36,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "843
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
-"4457
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 4457: extern volatile __bit TRISC3 __attribute__((address(0x43B)));
-[v _TRISC3 `Vb ~T0 @X0 0 e@1083 ]
-"4460
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 4460: extern volatile __bit TRISC4 __attribute__((address(0x43C)));
-[v _TRISC4 `Vb ~T0 @X0 0 e@1084 ]
-"3896
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 3896: extern volatile __bit GIE __attribute__((address(0x5F)));
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
-"4040
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 4040: extern volatile __bit PEIE __attribute__((address(0x5E)));
-[v _PEIE `Vb ~T0 @X0 0 e@94 ]
-"4277
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 4277: extern volatile __bit SSPIF __attribute__((address(0x63)));
-[v _SSPIF `Vb ~T0 @X0 0 e@99 ]
-"4274
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 4274: extern volatile __bit SSPIE __attribute__((address(0x463)));
-[v _SSPIE `Vb ~T0 @X0 0 e@1123 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -308,8 +290,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;I2C.c: 19:     SSPCON2 = 0;
 [e = _SSPCON2 -> -> 0 `i `uc ]
 "20
-[; ;I2C.c: 20:     SSPADD = (8000000/(4*c))-1;
-[e = _SSPADD -> - / -> -> 8000000 `l `ul * -> -> -> 4 `i `l `ul _c -> -> -> 1 `i `l `ul `uc ]
+[; ;I2C.c: 20:     SSPADD = (4000000/(4*c))-1;
+[e = _SSPADD -> - / -> -> 4000000 `l `ul * -> -> -> 4 `i `l `ul _c -> -> -> 1 `i `l `ul `uc ]
 "21
 [; ;I2C.c: 21:     SSPSTAT = 0;
 [e = _SSPSTAT -> -> 0 `i `uc ]
@@ -480,51 +462,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89
 [; ;I2C.c: 89: }
 [e :UE 147 ]
-}
-"93
-[; ;I2C.c: 93: void I2C_Slave_Init(uint8_t address)
-[v _I2C_Slave_Init `(v ~T0 @X0 1 ef1`uc ]
-"94
-[; ;I2C.c: 94: {
-{
-[e :U _I2C_Slave_Init ]
-"93
-[; ;I2C.c: 93: void I2C_Slave_Init(uint8_t address)
-[v _address `uc ~T0 @X0 1 r1 ]
-"94
-[; ;I2C.c: 94: {
-[f ]
-"95
-[; ;I2C.c: 95:     SSPADD = address;
-[e = _SSPADD _address ]
-"96
-[; ;I2C.c: 96:     SSPCON = 0x36;
-[e = _SSPCON -> -> 54 `i `uc ]
-"97
-[; ;I2C.c: 97:     SSPSTAT = 0x80;
-[e = _SSPSTAT -> -> 128 `i `uc ]
-"98
-[; ;I2C.c: 98:     SSPCON2 = 0x01;
-[e = _SSPCON2 -> -> 1 `i `uc ]
-"99
-[; ;I2C.c: 99:     TRISC3 = 1;
-[e = _TRISC3 -> -> 1 `i `b ]
-"100
-[; ;I2C.c: 100:     TRISC4 = 1;
-[e = _TRISC4 -> -> 1 `i `b ]
-"101
-[; ;I2C.c: 101:     GIE = 1;
-[e = _GIE -> -> 1 `i `b ]
-"102
-[; ;I2C.c: 102:     PEIE = 1;
-[e = _PEIE -> -> 1 `i `b ]
-"103
-[; ;I2C.c: 103:     SSPIF = 0;
-[e = _SSPIF -> -> 0 `i `b ]
-"104
-[; ;I2C.c: 104:     SSPIE = 1;
-[e = _SSPIE -> -> 1 `i `b ]
-"105
-[; ;I2C.c: 105: }
-[e :UE 150 ]
 }

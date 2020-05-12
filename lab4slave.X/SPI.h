@@ -48,4 +48,6 @@ void spiWrite(char);
 unsigned spiDataReady();
 char spiRead();
 
+
+
 #endif	/* SPI_H */

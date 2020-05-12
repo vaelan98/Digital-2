@@ -13,7 +13,7 @@
 #define RS PORTDbits.RD0
 #define EN PORTDbits.RD2
 
-#define _XTAL_FREQ 8000000
+#define _XTAL_FREQ 4000000
 #include <xc.h> // include processor files - each processor file is guarded.
 #include <stdint.h>
 #include <stdio.h>
@@ -23,22 +23,14 @@ unsigned char *guardar[10];
 unsigned char *guardar2[10];
 uint8_t i;
 uint8_t Voldc;
-uint8_t Voldc2;
+uint16_t Voldc2;
 uint8_t enviar;
 
 double voltaje;
-double voltaje2;
+uint16_t voltaje2;
 
 void caracter(uint8_t info);
 void ftoa2(float m, char* Q, int puntor);
-void ADCinit(void){
-    ADCON1bits.ADFM =0;
-    ADCON1bits.VCFG0 =0;
-    ADCON1bits.VCFG1 =0;
-    ADCON0bits.ADCS0 =1;
-    ADCON0bits.ADCS1 =0;
-    ADCON0bits.ADON = 1;
-                   }
 
 void port(char E){
     PORTA = E;
@@ -152,23 +144,11 @@ void lee2(uint8_t coso){
     
     
 }
-void lee3(uint8_t coso2){
+void lee3(uint16_t coso){
     __delay_ms(1);
     
-    Voldc2= coso2;
-    voltaje2=Voldc2*5.0/255.0;
-
-    ftoa2(voltaje2,guardar2,2);
-
-    word(guardar2);
-    __delay_ms(5);
-    
-}
-void lee4(uint8_t coso2){
-    __delay_ms(1);
-    
-    Voldc2= coso2;
-    voltaje2=Voldc2*5.0/255.0;
+    Voldc2= coso;
+    voltaje2=Voldc2;
      itoa(guardar2,voltaje2,10);
    
 
@@ -178,26 +158,6 @@ void lee4(uint8_t coso2){
     
     
 }
-void ADCread3(void){
-    
-   
-    enviar= RCREG;
-    voltaje=enviar*5.0/255.0;
-     itoa(guardar,voltaje,10);
-  
-
-    word(guardar);
-}
-void ADCread4(){
-    
-   
-   enviar= RCREG;
-    voltaje=enviar*5.0/255.0;
- // itoa(buffer,voltaje,10);
-    ftoa2(voltaje,guardar,2);
-
-    word(guardar);
-   }
 void caracter (uint8_t info){
     EN =0;
     RS =1;
@@ -254,5 +214,10 @@ void ftoa2(float m, char* Q, int puntor){
         Dtr((int)cosof, Q +1,puntor);
                 
     }
+}
+void Lcd_Write_Int( uint8_t numero){
+    char buffer [4];
+    sprintf (buffer, "%d", numero); 
+    word(buffer);
 }
 #endif	/* LCD_INSTRUCTIONS_H */
